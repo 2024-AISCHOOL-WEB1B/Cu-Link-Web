@@ -1,0 +1,309 @@
+/* MyReport.css */
+.myreport-report-box {
+  box-sizing: border-box;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 80%;
+  height: 100%;
+}
+
+.myreport-slider-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myreport-slider {
+  max-width: 1000px;
+  padding: 20px 0;
+  position: relative;
+  margin: 0 auto;
+  overflow: visible; /* 오버플로우를 보여주도록 설정 */
+}
+
+.myreport-swiper-slide {
+  width: auto !important;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: visible; /* 슬라이드 자체에서도 오버플로우를 보여줌 */
+}
+
+/* 모든 카드에 기본 축소 및 투명도 적용 */
+.myreport-swiper-slide .myreport-card {
+  transform: scale(0.7);
+  opacity: 0.6;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 현재 슬라이드 확대 효과 */
+.swiper-slide-active .myreport-card {
+  transform: scale(0.85);
+  opacity: 1;
+}
+
+/* 이전 및 다음 슬라이드 확대 비율 조정 */
+.swiper-slide-prev .myreport-card,
+.swiper-slide-next .myreport-card {
+  transform: scale(0.7);
+  opacity: 0.8;
+}
+
+.myreport-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-align: left;
+  width: 280px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 10px;
+}
+
+
+
+.myreport-card.selected {
+  background-color: #D1C7D7;
+}
+
+.myreport-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.myreport-card-content {
+  padding: 15px;
+  height: 140px;
+  overflow: hidden;
+}
+
+.myreport-select-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.myreport-scroll-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  
+}
+
+.myreport-articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 110px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.myreport-article-card {
+  display: flex;
+  gap: 15px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.myreport-article-card:hover {
+  background-color: #ececec;
+}
+
+.myreport-article-card.selected {
+  background-color: #e0e7ff;
+}
+
+.myreport-article-image1 {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.myreport-article-content {
+  flex: 1;
+}
+
+.myreport-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.myreport-button3 {
+  border: 1.5px solid #51017F;
+  background-color: #fff;
+  color: #51017F;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Pretendard-Regular';
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  width: 105px;
+  height: 30px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.myreport-button3:hover {
+  background-color: #51017F;
+  color: #fff;
+}
+
+.myreport-card-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.myreport-card-content p {
+  font-size: 14px;
+  color: #666;
+}
+
+.myreport-slider-section {
+  position: relative;
+}
+
+.myreport-prev-button,
+.myreport-next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 5rem;
+  cursor: pointer;
+  z-index: 10;
+  color: #51017F; /* 원하는 색상으로 변경 가능 */
+}
+
+.myreport-prev-button {
+  left: -20px; /* Swiper 왼쪽 바깥쪽에 위치 */
+}
+
+.myreport-next-button {
+  right: -20px; /* Swiper 오른쪽 바깥쪽에 위치 */
+}
+
+/* 모달 창의 전체 배경 */
+.myreport-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* 반투명 검은 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 모달 창 */
+.myreport-modal {
+  background: #fff;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  position: relative;
+}
+
+/* 모달 헤더 */
+.myreport-modal-header {
+  padding: 15px;
+  background-color: white; /* 상단 배경색 */
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* 모달 이미지 */
+.myreport-modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* 최대 높이 */
+  object-fit: cover;
+  display: block;
+}
+
+/* 모달 내용 */
+.myreport-modal-content {
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  text-align: justify;
+  max-height: 200px; /* 최대 높이 설정 */
+  overflow: auto; /* 스크롤 활성화 */
+  border-top: 1px solid #ccc;
+}
+
+/* 닫기 버튼 */
+.myreport-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+}
+
+/* 모달 내용 부분 스크롤바 */
+.myreport-modal-content::-webkit-scrollbar {
+  width: 8px; /* 스크롤바 너비 */
+}
+
+.myreport-modal-content::-webkit-scrollbar-button {
+  display: none; /* 위아래 화살표 제거 */
+  height: 0;
+}
+
+.myreport-modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 스크롤바 트랙 배경색 */
+  border-radius: 5px;
+}
+
+.myreport-modal-content::-webkit-scrollbar-thumb {
+  background: #51017F; /* 스크롤바 색상 */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 10px;
+  
+}
+
+.myreport-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #4500b5; /* 스크롤바 호버 색상 */
+}
+
+
+

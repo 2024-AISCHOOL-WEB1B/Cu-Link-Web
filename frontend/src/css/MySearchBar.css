@@ -1,0 +1,160 @@
+/* 기본 스타일 */
+.layout1 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* 왼쪽 빈 공간 */
+.left-space1 {
+  background-color: #F4F2F7;
+  width: 50%;
+}
+
+/* 오른쪽 검색바 */
+.search-bar1 {
+  margin-top: 3rem;
+  background-color: #F4F2F7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 90%;
+  box-sizing: border-box;
+  padding: 1rem;
+  /* border: 1px solid #d3d3d3; */
+  border-radius: 15px;
+  position: relative;
+  justify-content: flex-start;
+}
+
+/* 페이지 변경 옵션 */
+.select-option1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.search-select1 {
+  width: 12rem;
+  height: 2rem;
+  border: 1px solid #51017F;
+  color: #51017F;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.select-option1 svg {
+  position: absolute;
+  right: 10px;
+}
+
+/* 검색창과 툴팁 */
+.search-input-container1 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-input1 {
+  width: 9rem;
+  padding: 0.5rem;
+  border: 1px solid #51017F;
+  border-radius: 1.25rem;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.tooltip-button1 {
+  background: white;
+  border: 1px solid #51017F;
+  color: #51017F;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tooltip1 {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 0.5rem);
+  transform: translateY(-50%);
+  background-color: #fff;
+  color: #333;
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  width: 17rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.tooltip-button1:hover + .tooltip1 {
+  display: block;
+}
+
+/* 구분선 */
+.separator1 {
+  width: 80%;
+  height: 1px;
+  background-color: #51017F;
+  margin: 0.5rem 0;
+}
+
+/* 날짜 섹션 */
+.date-section1 {
+  align-self: center;
+  text-align: center;
+  margin-bottom: 1rem; /* 날짜 섹션과 검색 버튼 간 간격 */
+}
+
+/* 날짜 범위 */
+.date-range1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.date-input1 {
+  width: 5rem;
+  height: 1.5rem;
+  border: 1px solid #51017F;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+/* 검색 버튼 하단 고정 */
+.search-button-section1 {
+  align-self: center;
+  margin-top: auto;
+}
+
+.search-submit1 {
+  width: 12rem;
+  height: 2.2rem;
+  background-color: #51017F;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.search-submit1:hover {
+  background-color: #5d3474;
+}
