@@ -73,6 +73,9 @@ app.use(cors({
 const buildPath = path.join(__dirname, "..", "frontend", "build");
 app.use(express.static(buildPath));
 
+// 정적 파일 경로 확인 로그 (디버깅용)
+console.log('React Build Path:', buildPath);
+
 // 미들웨어 설정
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -87,7 +90,11 @@ app.use("/api/sum", sumRouter);
 
 // React 정적 파일 서빙을 위한 catch-all 라우터
 app.get("*", (req, res) => {
-  res.sendFile(path.join(buildPath, "index.html"));
+  res.sendFile(path.join(buildPath, "index.html"), (err) => {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
 });
 
 // 서버 시작
